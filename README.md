@@ -68,6 +68,9 @@ A aplicação é executada via linha de comando e oferece um menu interativo par
 ### Mineração
 ![Mining](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/mining.png)
 
+### Blockchain
+![Blockchain](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/blockchain.png)
+
 ### Blockchain Válida
 ![Blockchain Valid](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/blockchainValid.png)
 

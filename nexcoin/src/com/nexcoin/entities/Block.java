@@ -16,7 +16,7 @@ public class Block {
     // Constructor - Register the Genesis Block 
     public Block(int index, ArrayList<Transaction> transactions, Timestamp time){
         this.index = index;
-        this.transactions = transactions;
+        this.transactions = new ArrayList<>(transactions);
         this.time = time;;
         this.previousHash = "0";
         this.previousBlock = null;
@@ -26,7 +26,7 @@ public class Block {
     // Constructor - Register any other block
     public Block(int index, ArrayList<Transaction> transactions, Timestamp time, Block previousBlock){
         this.index = index;
-        this.transactions = transactions;
+        this.transactions = new ArrayList<>(transactions);
         this.time = time;
         this.previousBlock = previousBlock;
         this.previousHash = previousBlock.getHash();
@@ -37,7 +37,7 @@ public class Block {
     public void proofOfWork(int difficulty){
         String target = "0".repeat(difficulty);
         while (true){
-            this.hash = computeHash(this.index + this.previousBlock.getHash() + this.time + this.transactions.toString() + this.nonce);
+            this.hash = computeHash(hashStringBuilder(this.transactions));
             if (this.hash.substring(0, difficulty).equals(target)){
                 break;
             }
@@ -48,7 +48,7 @@ public class Block {
     // Create a String to use as input to create the hash of a Block 
     public String hashStringBuilder(ArrayList<Transaction> transactions){
         StringBuilder sb = new StringBuilder();
-        sb.append(index).append(previousHash).append(time.toString()).append(nonce);
+        sb.append(this.index).append(this.previousHash).append(this.time.toString()).append(this.nonce);
         for (Transaction tx : transactions) {
             sb.append(tx.toString()); 
         }
@@ -86,7 +86,7 @@ public class Block {
         return index; 
     } 
     public ArrayList<Transaction> getTransactions(){ 
-        return transactions; 
+        return new ArrayList<>(transactions); 
     }
     public Timestamp getTime(){ 
         return time; 

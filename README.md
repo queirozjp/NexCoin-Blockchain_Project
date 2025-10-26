@@ -39,26 +39,36 @@ A aplicação é executada via linha de comando e oferece um menu interativo par
 
 ## 🕹️ Testes
 
-Menu:
+### Menu:
 ![menu](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/edea94afa0b94ead20701f5a3622cdeeefeb0ef6/images/menu.png)
-Create new wallet:
+
+### Create new wallet:
 ![cwallet](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/edea94afa0b94ead20701f5a3622cdeeefeb0ef6/images/CreateWallet.png)
-Fetch wallet balance:
+
+### Fetch wallet balance:
 ![fetch](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/fetch.png)
-Display list of wallets:
+
+### Display list of wallets:
 ![lswal](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/displaywallets.png)
-Display public key:
+
+### Display public key:
 ![publickey](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/displayPublicKey.png)
-Make a new transaction:
+
+### Make a new transaction:
 ![newtransaction](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/transaction.png)
-Display pending transactions:
+
+### Display pending transactions:
 ![pendingtr](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/displayTransactions.png)
-Mine transactions:
+
+### Mine transactions:
 ![mining](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/mining.png)
-View blockchain:
+
+### View blockchain:
 ![blockchain](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/ff2e127e80b39041e44bd889b0c0a45b6276197f/images/blockchain.png)
-Verify blockchain integrity:
+
+### Verify blockchain integrity:
 ![verify](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/ff2e127e80b39041e44bd889b0c0a45b6276197f/images/blockchainValid.png)
+
 
 
 

@@ -49,24 +49,33 @@ public class BlockchainController {
         return balance;
     }
 
+    public static float fetchPendingSpending(Wallet address, Blockchain blockchain) {
+        float pendingSpending = 0;
+        for (Transaction tx : blockchain.getPendingTransactions()) {
+            if (Objects.equals(tx.getSender(), address)) {
+                pendingSpending += tx.getCoinAmount();
+            }
+        }
+        return pendingSpending;
+    }
+
     // Check the validity of the chain by computing the hash of the current block again and comparing,
     // and by comparing the previoushash of the current block with the hash of the previous block
     public static boolean isChainValid(Blockchain blockchain){
         Block current = blockchain.getLatestBlock();
 
-        while (current != null && current.getPreviousBlock() != null) {
-            Block previousBlock = current.getPreviousBlock();
-            int index = current.getIndex();
-            String previousHash = previousBlock.getHash();
-            Timestamp time = current.getTime();
-            String transactions = current.getTransactions().toString(); 
-            if (!current.getHash().equals(current.computeHash(index + previousHash + time + transactions))){
+        while (current != null 
+                       && current.getPreviousBlock() != null 
+                       && !current.getPreviousBlock().getPreviousHash().equals("0")) {
+            Block anteriorBlock = current.getPreviousBlock(); 
+            if (!current.getHash().equals(current.computeHash(current.hashStringBuilder(current.getTransactions())))) {
+                System.out.println("ERROAQUI");
                 return false;
             }
-            if (!current.getPreviousHash().equals(previousBlock.getHash())){
+            if (!current.getPreviousHash().equals(anteriorBlock.getHash())) {
                 return false;
             }
-            current = current.getPreviousBlock();
+            current = anteriorBlock;
         }
         return true;
     }

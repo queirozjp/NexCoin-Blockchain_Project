@@ -48,10 +48,4 @@ public class Transaction {
     public float getCoinAmount(){ 
         return coinAmount;
     }
-
-
-    @Override
-    public String toString() {
-        return sender + " -> " + receiver + ": " + coinAmount;
-    }
 }

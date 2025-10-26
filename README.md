@@ -39,38 +39,40 @@ A aplicação é executada via linha de comando e oferece um menu interativo par
 
 ## 🕹️ Testes
 
-### Menu:
-![menu](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/edea94afa0b94ead20701f5a3622cdeeefeb0ef6/images/menu.png)
+## 🧩 Interface de Testes
 
-### Create new wallet:
-![cwallet](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/edea94afa0b94ead20701f5a3622cdeeefeb0ef6/images/CreateWallet.png)
+### Menu
+![Menu](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/menu.png)
 
-### Fetch wallet balance:
-![fetch](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/fetch.png)
+### Criar Carteira
+![Create Wallet](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/CreateWallet.png)
 
-### Display list of wallets:
-![lswal](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/displaywallets.png)
+### Buscar Saldo
+![Fetch Wallet](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/fetch.png)
 
-### Display public key:
-![publickey](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/displayPublicKey.png)
+### Mostrar Carteiras
+![Display Wallets](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/displaywallets.png)
 
-### Make a new transaction:
-![newtransaction](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/transaction.png)
+### Mostrar Chave Pública
+![Display Public Key](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/displayPublicKey.png)
 
-### Display pending transactions:
-![pendingtr](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/displayTransactions.png)
+### Transações
+![Transaction](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/transaction.png)
 
-### Mine transactions:
-![mining](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/mining.png)
+### Transações Criadas
+![Create Wallet Transactions](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/createWalletTransactions.png)
 
-### View blockchain:
-![blockchain](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/ff2e127e80b39041e44bd889b0c0a45b6276197f/images/blockchain.png)
+### Transações Exibidas
+![Display Transactions](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/displayTransactions.png)
 
-### Verify blockchain integrity:
-![verify](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/ff2e127e80b39041e44bd889b0c0a45b6276197f/images/blockchainValid.png)
+### Mineração
+![Mining](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/mining.png)
 
+### Blockchain Válida
+![Blockchain Valid](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/blockchainValid.png)
 
-
+### Erro de Transação
+![Transaction Error](https://raw.githubusercontent.com/queirozjp/NexCoin-Blockchain_Project/main/images/TransactionError.png)
 
 ## ▶️ Como Executar
 

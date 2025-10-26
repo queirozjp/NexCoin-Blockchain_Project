@@ -1,4 +1,4 @@
-# 🪙 Projeto NexCoin: Implementação Educacional de Blockchain
+<img width="1387" height="107" alt="image" src="https://github.com/user-attachments/assets/b8ad7941-d9bf-403b-839f-74f87eaef6ae" /># 🪙 Projeto NexCoin: Implementação Educacional de Blockchain
 
 [![Java](https://img.shields.io/badge/Language-Java-007396?style=flat-square&logo=java)](https://www.java.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -36,6 +36,31 @@ A aplicação é executada via linha de comando e oferece um menu interativo par
 | **7** | Minerar transações | Algoritmo de Proof-of-Work e adição de bloco. |
 | **8** | Visualizar blockchain | Exibição da cadeia e dos dados dos blocos. |
 | **9** | Verificar integridade | Verificação de hashes sequenciais dos blocos. |
+
+## 🕹️ Testes
+
+Menu:
+![menu](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/edea94afa0b94ead20701f5a3622cdeeefeb0ef6/images/menu.png)
+Create new wallet:
+![cwallet](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/edea94afa0b94ead20701f5a3622cdeeefeb0ef6/images/CreateWallet.png)
+Fetch wallet balance:
+![fetch](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/fetch.png)
+Display list of wallets:
+![lswal](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/displaywallets.png)
+Display public key:
+![publickey](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/displayPublicKey.png)
+Make a new transaction:
+![newtransaction](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/transaction.png)
+Display pending transactions:
+![pendingtr](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/displayTransactions.png)
+Mine transactions:
+![mining](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/d517c9d6e3784a984dc410446d2ef256997f1ce8/images/mining.png)
+View blockchain:
+![blockchain](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/ff2e127e80b39041e44bd889b0c0a45b6276197f/images/blockchain.png)
+Verify blockchain integrity:
+![verify](https://github.com/queirozjp/NexCoin-Blockchain_Project/blob/ff2e127e80b39041e44bd889b0c0a45b6276197f/images/blockchainValid.png)
+
+
 
 ## ▶️ Como Executar
 

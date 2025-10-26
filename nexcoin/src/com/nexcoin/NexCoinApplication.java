@@ -53,9 +53,9 @@ public class NexCoinApplication {
             if (start.equals("1")){
                 Blockchain blockchain  = new Blockchain();
                 Wallet genesis = blockchain.getGenesisWallet();
-                menu();
-                while (!option.equals("10")){
-                    option = sc.nextLine();
+                do {
+                    menu(); // 1. MOSTRA o menu e o prompt "Option: "
+                    option = sc.nextLine(); // 2. LÊ a opção do usuário
                     switch (option) {
                         case "1":
                             System.out.println("To cancel operation type 0");
@@ -78,8 +78,6 @@ public class NexCoinApplication {
                                 System.out.print("Public Key: " + walletlist[walletscount].getAddress());
                                 walletscount++;
                             }
-                                
-                            menu();
                             break;
                         case "2":
                             System.out.println("To cancel operation type 0");
@@ -97,14 +95,12 @@ public class NexCoinApplication {
                                 }
                                 else{ System.out.println("WALLET NOT FOUND!!!"); }
                             }
-                            menu();
                             break;
                         case "3":
                             for (int i = 0; i < walletscount; i++){
                                 if ( i + 1 < walletscount){ System.out.print(walletlist[i].getUsername() + " | "); }
                                 else{ System.out.print(walletlist[walletscount-1].getUsername()); }  
                             }
-                            menu();
                             break;
                         case "4":
                             System.out.println("To cancel operation type 0");
@@ -122,14 +118,16 @@ public class NexCoinApplication {
                                 }
                                 if (!walletExists || walletscount == 0) { System.out.println("WALLET NOT FOUND!!!"); }
                             }
-                            menu();
                             break;
                         case "5":
                             System.out.println("To cancel operation type 0");
                             System.out.print("Enter the sender's wallet public key: ");
                             senderPublicKey = sc.nextLine();
-                            WalletValidation senderValidadtion = isWalletValid(walletlist, senderPublicKey, walletscount);
-                            while (!senderPublicKey.equals("0") &&senderValidadtion.getExist()) {
+                            WalletValidation senderValidation = isWalletValid(walletlist, senderPublicKey, walletscount);
+                            float confirmedBalance = BlockchainController.fetchBalance(senderValidation.getWallet(), blockchain);
+                            float pendingSpending = BlockchainController.fetchPendingSpending(senderValidation.getWallet(), blockchain);
+                            float effectiveBalance = confirmedBalance - pendingSpending;
+                            while (!senderPublicKey.equals("0") &&senderValidation.getExist()) {
                                 System.out.print("Enter the receivers's wallet public key: ");
                                 receiverPublicKey = sc.nextLine();
                                 WalletValidation receiverValidation = isWalletValid(walletlist, receiverPublicKey, walletscount);
@@ -143,29 +141,29 @@ public class NexCoinApplication {
                                 }
                                 if (attempts == 3 || senderPublicKey.equals(receiverPublicKey)){ 
                                     System.out.println("FAILED TRANSACTION!!!");
-                                    menu();
                                     break; 
                                 }
                                 System.out.print("\nEnter the amount of nexcoins: ");
                                 float amount = sc.nextFloat();
-                                if (amount > BlockchainController.fetchBalance(senderValidadtion.getWallet(), blockchain) || amount <= 0){
-                                    System.out.println("FAILED TRANSACTION!!!");
-                                    menu();
+                                sc.nextLine();
+                                if (amount > effectiveBalance || amount <= 0){
+                                    System.out.println("FAILED TRANSACTION!!! (Insufficient funds or invalid amount)");
+                                    System.out.println("Confirmed Balance: " + confirmedBalance);
+                                    System.out.println("Pending Spending: " + pendingSpending);
+                                    System.out.println("Effective Balance: " + effectiveBalance + " | Attempted: " + amount);
                                     break;
                                 }else{
-                                    BlockchainController.registerTransaction(senderValidadtion.getWallet(), receiverValidation.getWallet(), amount, blockchain);
+                                    BlockchainController.registerTransaction(senderValidation.getWallet(), receiverValidation.getWallet(), amount, blockchain);
                                     System.out.println("Transaction registered!!!");
                                     break;
                                 }
                             }
-                            if (!senderValidadtion.getExist()){ System.out.print("WALLET NOT FOUND!!!"); }
-                            menu();
+                            if (!senderValidation.getExist()){ System.out.print("WALLET NOT FOUND!!!"); }
                             break;
                         case "6":
                             for (Transaction t : blockchain.getPendingTransactions()){
                                 System.out.print(t.getSender().getUsername() + " -> " + t.getReceiver().getUsername() + " Amount: " + t.getCoinAmount() + " | ");
                             }
-                            menu();
                             break;
                         case "7":
                             System.out.println("To cancel operation type 0");
@@ -184,22 +182,19 @@ public class NexCoinApplication {
                                 }  
                             }
                             if (!found || walletscount == 0){ System.out.println("WALLET NOT FOUND!!!"); }
-                            menu();
                             break;
                         case "8":
                             System.out.println(blockchain.toString());
-                            menu();
                             break;
                         case "9":
                             if(BlockchainController.isChainValid(blockchain)){
                                 System.out.println("Blockchain is valid !!!"); 
                             }else {System.out.println("BLOCKCHAIN IS INVALID!!!");}
-                            menu();
                             break;
                         default:
                             break;
                     }
-                }
+                } while (!option.equals("10"));
             }
         }
         sc.close();

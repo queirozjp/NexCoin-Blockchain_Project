@@ -1,4 +1,4 @@
-<img width="1387" height="107" alt="image" src="https://github.com/user-attachments/assets/b8ad7941-d9bf-403b-839f-74f87eaef6ae" /># 🪙 Projeto NexCoin: Implementação Educacional de Blockchain
+# 🪙 Projeto NexCoin: Implementação Educacional de Blockchain
 
 [![Java](https://img.shields.io/badge/Language-Java-007396?style=flat-square&logo=java)](https://www.java.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
